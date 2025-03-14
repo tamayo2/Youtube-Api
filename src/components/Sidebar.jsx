@@ -215,9 +215,13 @@ function Sidebar() {
                         </div>
                     );
                 })}
-            </div>
+                <hr/>
+            </div><br/>
+            <span className="text-xs font-semibold text-gray-400">About Press Copyright<br/>Contact Us Creators<br/>Advertise Developers<br/><br/>
+                <p>Terms Privacy Policy & Safety<br/>How Youtube works <br/>Test new features</p>
+            </span>
             <br/>
-            <hr/>
+            <p className="text-xs text-gray-800 mt-1">© 2025 Learn Coding</p>
         </div>
     )
 }
