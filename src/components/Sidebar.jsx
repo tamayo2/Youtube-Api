@@ -129,9 +129,31 @@ function Sidebar() {
             icon:<MdPodcasts />,
         },
     ]
+    const sidebarItems4 =[
+        {
+            id:1,
+            name: "Youtube Premium",
+            icon:<FaYoutube />,
+        },
+        {
+            id:2,
+            name: "Youtube Studio",
+            icon:<SiYoutubestudio />,
+        },
+        {
+            id:3,
+            name: "Youtube Music",
+            icon:<SiYoutubemusic />,
+        },
+        {
+            id:3,
+            name: "Youtube Kids",
+            icon:<SiYoutubekids />,
+        },
+    ]
 
     return (
-        <div className="px-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden">
+        <div className="px-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden mt-16">
             {/* Home */}
             <div className="space-y-3 items-center">
                 {sidebarItems.map((item) =>{
@@ -172,6 +194,23 @@ function Sidebar() {
                     return (
                         <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
                             <div className="text-xl cursor-pointer">{item.icon}</div>
+                            <span className="cursor-pointer">{item.name}</span>
+                        </div>
+                    );
+                })}
+            </div>
+            <br/>
+            <hr/>
+            {/* More Section*/}
+            <div className="mt-4 space-y-3 items-center">
+                <div className="items-center space-x-2">
+                    <h1 className="font-semibold">Move From Youtube</h1>
+
+                </div>
+                {sidebarItems4.map((item) =>{
+                    return (
+                        <div className="flex items-center space-x-6 hover:bg-gray-300 duration-300 rounded-xl p-1">
+                            <div className="text-xl cursor-pointer text-red-500">{item.icon}</div>
                             <span className="cursor-pointer">{item.name}</span>
                         </div>
                     );
