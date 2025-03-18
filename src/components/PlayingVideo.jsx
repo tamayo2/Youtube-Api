@@ -63,10 +63,33 @@ function PlayingVideo() {
                             </div>
                             <div className="flex space-x-5">
                                 <div className="flex flex-col ml-3">
-
+                                    <div className="text-md font-semibold flex items-center">
+                                        {video?.author?.title}
+                                        {video?.author?.badges[0]?.type === "VERIFIED_CHANELL" && (
+                                            <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] m1-1" />
+                                        )}
+                                    </div>
+                                    <div className="text-sm">
+                                        {video?.author?.stats?.suscribersText}
+                                    </div>
                                 </div>
+                                <span className="mt-1 text-center bg-red-500 px-3 pt-2 rounded-full text-white cursor pointer hover:bg-red-700 duration-200">
+                                    Subscribe
+                                </span>
                             </div>
                         </div>
+                        <div className="flex mt-4 md:mt-0">
+                            <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15]">
+                                <AiOutlineLike className="text-xl mr-2" />
+                                {`${abbreviateNumber(video?.stats?.likes, 2)} Likes`}
+                            </div>
+                            <div className="flex items-center justify-center h-11 px-6 rounded-3xl bg-white/[0.15] ml-4">
+                                {`${abbreviateNumber(video?.stats?.views, 2)} Views`}
+                            </div>
+                        </div>
+                    </div>
+                    <div className="p-4 bg-gray-100 rounded-xl mt-4 text-sm">
+                        {video?.description}
                     </div>
                 </div>
             </div>
